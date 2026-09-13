@@ -11,8 +11,10 @@ AI-to-AI communication must not be assumed to be direct; repository artifacts ar
 - ChatGPT / Chief: final authority, all default high-load execution, architecture, integration, and memory maintenance.
 - GitHub Copilot: instruction, GitHub-oriented inspection, review, validation guidance, and handoff support.
 - CodeRabbit: verified low-load automated PR reviewer and current Reviewer Slot candidate.
-- Gemini: independent review and critique; not yet connected.
-- Claude: design/reasoning/architecture/code review; not yet connected.
+- Claude: optional Reviewer Slot candidate; connection is not verified and no review is claimed.
+
+## Retired
+- Gemini: retired from the team at the user's explicit request because it is no longer usable. Excluded from routing, review, and failover unless explicitly re-added.
 
 ## Core policies
 - Every AI must read and confirm the current `RULES.md` before acting or recommending anything, and reread it when the task changes or a new handoff/result/review is received.
@@ -30,5 +32,11 @@ AI-to-AI communication must not be assumed to be direct; repository artifacts ar
 - PR #1 was closed without merge after verification.
 - The review evidence is recorded in `REVIEW.md`; CodeRabbit is registered in `AI_STATUS.md` and `AI_CAPABILITIES.md`.
 
-## Current next action
-Exercise the repository-evidenced sample task lifecycle `READY → IN_PROGRESS → REVIEW → APPROVED → DONE`. Keep Gemini/Claude optional until actually connected and useful; do not claim either review occurred.
+## Protocol validation result
+- The repository-evidenced sample task lifecycle successfully completed: `READY → IN_PROGRESS → REVIEW → APPROVED → DONE`.
+- The transition evidence is recorded in `TASK.md` as sequential repository commits.
+- No direct `REVIEW → DONE` transition was used.
+- The explicit `APPROVED` gate was exercised before `DONE`.
+
+## Current operating state
+AI TEAM HQ protocol validation is complete. The team is ready for normal project onboarding and operation. Claude may be added later if an actual supported connection becomes available and useful.
