@@ -1,7 +1,7 @@
 # TASK
 
 ## Status
-IN_PROGRESS
+REVIEW
 
 ## Objective
 Complete validation of the AI TEAM HQ collaboration protocol before using it as the shared control center for future projects.
@@ -10,9 +10,16 @@ Complete validation of the AI TEAM HQ collaboration protocol before using it as 
 Repository-evidenced sample lifecycle test.
 
 ## Lifecycle test
-- READY: entered by commit `2c8bc2eb00bc2c3ca347039e62ac9b594e568458`.
-- IN_PROGRESS: execution of the lifecycle validation is now active.
-- Next target: REVIEW.
+- READY: commit `2c8bc2eb00bc2c3ca347039e62ac9b594e568458`
+- IN_PROGRESS: commit `1ad5e9316da7ff3f496bddeedbe068389d90f1ab`
+- REVIEW: execution phase completed; protocol evidence is now under review.
+
+## Review evidence
+- `TASK_STATES.md` explicitly requires `REVIEW → APPROVED → DONE` and prohibits direct `REVIEW → DONE`.
+- The Reviewer Slot is evidence-verified through CodeRabbit's actual PR #1 review.
+- CodeRabbit detected the intentional parity defect in `tests/coderabbit_review_demo.py`, demonstrating that repository-based review evidence can catch a real issue.
+- PR #1 was closed without merge after verification.
+- Chief re-read `RULES.md` before this lifecycle test and verified the completion/evidence requirements.
 
 ## Completed foundation
 - Rule integrity and mandatory rule rereading
@@ -32,18 +39,6 @@ Repository-evidenced sample lifecycle test.
 - Interchangeable Reviewer Slot architecture
 - CodeRabbit repository-based Reviewer Slot validation
 - Gemini retirement from normal team routing
-
-## Validation performed by Chief
-- Re-read the current `RULES.md` before continuing.
-- Checked the task lifecycle definition against the operating protocol.
-- Checked that high-load execution, optimization, evidence, handoff, failover, and memory rules are mutually aligned.
-- Checked that task completion requires evidence rather than an AI assertion.
-- Verified CodeRabbit performed an actual repository-based review of temporary PR #1.
-- Verified CodeRabbit detected the intentional parity-check defect in `tests/coderabbit_review_demo.py`.
-- Closed PR #1 without merging it after verification.
-- Recorded CodeRabbit review evidence in `REVIEW.md` and registered it in the Reviewer Slot status/capability registries.
-- Verified Gemini is retired and excluded from routing/review.
-- Verified Claude remains optional and is not claimed as connected.
 
 ## Lifecycle test criteria
 - Each state transition is represented by a repository commit.
