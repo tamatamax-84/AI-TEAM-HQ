@@ -15,6 +15,7 @@ This file is the shared operational status registry for AI TEAM HQ.
 |---|---|---|---|
 | ChatGPT / Chief | ACTIVE | Chief / execution / memory maintenance | YES |
 | GitHub Copilot | ACTIVE | Instruction / review hub / Reviewer Slot candidate | NO |
+| CodeRabbit | ACTIVE | Automated PR reviewer / Reviewer Slot | NO |
 | Gemini | NOT_CONNECTED | Reviewer Slot candidate / independent reviewer | NO |
 | Claude | NOT_CONNECTED | Reviewer Slot candidate / design & review specialist | NO |
 
@@ -24,6 +25,7 @@ This file is the shared operational status registry for AI TEAM HQ.
 - Do not create billing credentials or paid usage merely to fill the slot.
 - If one reviewer is unavailable or its usable quota is exhausted, another eligible reviewer may be selected without changing the task or authority structure.
 - A reviewer must be actually available and must produce evidence before its review is recorded as completed.
+- CodeRabbit is now an evidence-verified Reviewer Slot candidate based on PR #1. Its verified role is automated low-load PR review only.
 - If no eligible reviewer is available, the review remains pending/unavailable; do not claim completion.
 
 ## Status rules
