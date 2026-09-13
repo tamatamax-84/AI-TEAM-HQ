@@ -10,9 +10,15 @@
 - Assigned default memory maintenance ownership to ChatGPT / Chief because cleanup requires cross-file judgment and can be high-load.
 - Limited Copilot and Gemini to identifying stale/redundant/conflicting information and recommending cleanup unless the user explicitly authorizes an exception.
 - Recorded these decisions as D-007 and D-008.
+- Added strict workload policy in `RULES.md` v1.4: ChatGPT / Chief is the only default high-load executor, including after new AIs are added.
+- Added AI availability, credit-limit, suspension, recovery, and failover rules.
+- Defined special handling for Chief credit exhaustion: preserve only the next actionable resumption step, pause high-load work, and inform the user instead of transferring execution.
+- Added mandatory pre-execution optimization: consider lower-load alternatives before starting high-load work.
+- Added Claude as a future team role and created AI status, failover, capability, retirement/recovery, and universal protocol documents.
+- Recorded these decisions as D-009, D-010, and D-011.
 
 ### Next
-Maintain shared memory deliberately: preserve active rules, confirmed decisions, required evidence, unresolved issues, and useful current state; avoid unnecessary accumulation and unnecessary context loading.
+Connect Gemini and Claude when ready, then verify that each AI can follow the current `RULES.md` and shared-memory protocol before assigning normal team work.
 
 ## 2026-09-13
 
