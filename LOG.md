@@ -20,6 +20,9 @@
 - Added explicit task lifecycle/completion gates and reusable project-registration requirements.
 - Created `MEMORY/CURRENT.md` as a concise current-state memory so AIs do not need to load the full archive.
 - Updated the next phase to protocol validation before Gemini/Claude are used for normal work.
+- Established monthly maintenance as a combined cycle: shared-memory cleanup plus AI TEAM HQ health check.
+- The monthly health check covers rule consistency, control-file/system consistency, task lifecycle readiness, AI status/failover behavior, stale or conflicting information, and safe project-entry readiness.
+- Health-check findings are recorded in `LOG.md`; rule changes require explicit user authorization and the normal decision/change procedure.
 
 ### Next
 Validate the standard task → handoff → result → review → decision → done lifecycle, then connect Gemini and Claude and run a small compliance/handoff test.
