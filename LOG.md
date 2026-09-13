@@ -8,6 +8,8 @@
 - Created the first TASK and HANDOFF for Copilot.
 - Initialized RESULT and REVIEW channels.
 - Recorded initial architecture decisions.
+- Added mandatory rule-integrity policy: every AI must read the current `RULES.md` before every task/action/recommendation/handoff/review/result, and rulebook changes require explicit user authorization.
+- Recorded this policy as decision D-006.
 
 ### Next
-Wait for Copilot to execute the current handoff and write evidence-based results.
+All AIs must perform the mandatory `RULES.md` check before continuing any work. Do not treat accumulated conversation context as a substitute for rereading the current rulebook.
