@@ -7,7 +7,7 @@ REVIEW
 Complete validation of the AI TEAM HQ collaboration protocol before using it as the shared control center for future projects.
 
 ## Current phase
-Protocol validation — Chief execution/check phase complete; independent review pending.
+Reviewer Slot validation complete; repository-evidenced sample lifecycle validation remains.
 
 ## Completed foundation
 - Rule integrity and mandatory rule rereading
@@ -24,6 +24,8 @@ Protocol validation — Chief execution/check phase complete; independent review
 - Claude role definition
 - Concise current-state memory
 - Monthly memory cleanup + HQ health-check cycle
+- Interchangeable Reviewer Slot architecture
+- CodeRabbit repository-based Reviewer Slot validation
 
 ## Validation performed by Chief
 - Re-read the current `RULES.md` before continuing.
@@ -31,22 +33,24 @@ Protocol validation — Chief execution/check phase complete; independent review
 - Checked that high-load execution, optimization, evidence, handoff, failover, and memory rules are mutually aligned.
 - Checked that the current handoff explicitly prevents claiming an unavailable Gemini/Claude review.
 - Checked that task completion requires evidence rather than an AI assertion.
+- Verified CodeRabbit performed an actual repository-based review of temporary PR #1.
+- Verified CodeRabbit detected the intentional parity-check defect in `tests/coderabbit_review_demo.py`.
+- Closed PR #1 without merging it after verification.
+- Recorded CodeRabbit review evidence in `REVIEW.md` and registered it in the Reviewer Slot status/capability registries.
 
 ## Current review gate
-The protocol is ready for independent review. Gemini and Claude are still `NOT_CONNECTED`, so no independent AI review is claimed as completed.
+The Reviewer Slot itself is verified with repository evidence. CodeRabbit is now an evidence-verified low-load reviewer candidate. Gemini and Claude remain `NOT_CONNECTED` and are not claimed as completed reviewers.
 
 ## Remaining validation
-- Obtain an actual independent review from an available non-Chief AI.
-- Resolve and record any findings.
-- Verify the full sample lifecycle reaches APPROVED and DONE with repository evidence.
-- Connect and verify Gemini.
-- Connect and verify Claude.
-- Run a small multi-AI rule-compliance and handoff test.
-- Fix any issues discovered during the test before normal project work.
+- Exercise the full sample lifecycle with repository evidence: `READY → IN_PROGRESS → REVIEW → APPROVED → DONE`.
+- Verify that the completion gate is enforced by evidence and review status.
+- Optionally connect and verify Gemini or Claude as additional Reviewer Slot candidates when useful; this is no longer a prerequisite for using the interchangeable slot because CodeRabbit is verified.
+- Run a small multi-AI rule-compliance and handoff test when another eligible AI is actually connected.
+- Fix any issues discovered during the lifecycle test before normal project work.
 
 ## Ongoing maintenance
 - Monthly maintenance combines shared-memory cleanup with an AI TEAM HQ health check.
-- The health check reviews rule consistency, system/control-file consistency, task lifecycle readiness, AI status/failover behavior, stale or conflicting information, and whether a new project can safely enter the workflow.
+- The health check reviews rule consistency, control-file/system consistency, task lifecycle readiness, AI status/failover behavior, stale or conflicting information, and whether a new project can safely enter the workflow.
 - Findings are recorded in `LOG.md`; proposed rule changes require explicit user authorization and the normal decision/change procedure.
 - Chief owns the monthly maintenance by default. Other AIs may flag issues during low-load review but do not perform high-load cleanup by default.
 
