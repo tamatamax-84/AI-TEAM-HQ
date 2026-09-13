@@ -2,11 +2,11 @@
 
 ## Message metadata
 - From: Chief
-- To: Protocol validation / next available review AI
+- To: Next available review AI / Reviewer Slot
 - Status: READY
 
 ## Mission
-Validate the current AI TEAM HQ protocol before Gemini and Claude are used for normal work.
+Support normal AI TEAM HQ operation and independent review when a suitable non-Chief reviewer is actually available.
 
 ## Read first
 - RULES.md
@@ -16,27 +16,30 @@ Validate the current AI TEAM HQ protocol before Gemini and Claude are used for n
 - DECISIONS.md
 - AI_STATUS.md
 - AI_TEAM_PROTOCOL.md
+- REVIEWER_SLOT.md
 
-## Required actions
-1. Check protocol consistency and role boundaries.
-2. Verify that credit-limit and failover behavior is unambiguous.
-3. Verify that high-load work remains ChatGPT-only by default.
-4. Verify that high-load work requires a lower-load alternative check before execution.
-5. Verify that memory is selectively loaded and periodically maintained by Chief.
-6. Identify any contradictions, missing gates, stale instructions, or unsafe assumptions.
-7. Do not perform high-load implementation.
-8. Record findings in the appropriate review/result artifact.
+## Required actions for a review handoff
+1. Check the current `RULES.md` before acting.
+2. Check current AI status and role boundaries.
+3. Inspect only the minimum relevant project/task context.
+4. Check protocol consistency, requirements, implementation, risks, edge cases, or other review scope assigned by Chief.
+5. Do not perform high-load implementation.
+6. Record findings in the appropriate review/result artifact.
+7. Provide evidence and a review status of `PASS`, `WARN`, `FAIL`, or `NOT_PERFORMED`.
 
 ## Output contract
 Report:
 - status
-- files inspected
+- reviewer
+- files/context inspected
+- review scope
 - findings
-- contradictions or gaps
+- severity / priority
 - recommended changes
 - checks performed
-- remaining risks
+- evidence or repository reference
+- remaining risks / unknowns
 - recommendation for the next agent
 
 ## Important
-If Gemini or Claude is not actually available through the current environment, do not pretend the review occurred. Record the exact review handoff needed instead.
+Only claim a review occurred when the reviewer was actually available and produced evidence. Claude is currently `NOT_CONNECTED`; Gemini is `RETIRED`. CodeRabbit is the currently verified Reviewer Slot candidate. If no eligible reviewer is available, record the review as pending/unavailable rather than claiming completion.
