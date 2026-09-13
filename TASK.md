@@ -1,46 +1,29 @@
 # TASK
 
 ## Status
-REVIEW
+APPROVED
 
 ## Objective
 Complete validation of the AI TEAM HQ collaboration protocol before using it as the shared control center for future projects.
 
 ## Current phase
-Repository-evidenced sample lifecycle test.
+Sample lifecycle review completed and accepted by Chief.
 
-## Lifecycle test
+## Lifecycle test evidence
 - READY: commit `2c8bc2eb00bc2c3ca347039e62ac9b594e568458`
 - IN_PROGRESS: commit `1ad5e9316da7ff3f496bddeedbe068389d90f1ab`
-- REVIEW: execution phase completed; protocol evidence is now under review.
+- REVIEW: commit `dc80eb87656b10c6d53c156b3249b931d77fa9ef`
+- The test did not use a direct `REVIEW → DONE` transition.
+- `TASK_STATES.md` requires explicit `APPROVED` before `DONE`.
+- Reviewer Slot evidence exists from CodeRabbit PR #1, which detected the intentional parity defect and was closed without merge.
+- Chief re-read `RULES.md` and accepted the lifecycle evidence.
 
-## Review evidence
-- `TASK_STATES.md` explicitly requires `REVIEW → APPROVED → DONE` and prohibits direct `REVIEW → DONE`.
-- The Reviewer Slot is evidence-verified through CodeRabbit's actual PR #1 review.
-- CodeRabbit detected the intentional parity defect in `tests/coderabbit_review_demo.py`, demonstrating that repository-based review evidence can catch a real issue.
-- PR #1 was closed without merge after verification.
-- Chief re-read `RULES.md` before this lifecycle test and verified the completion/evidence requirements.
+## Approval decision
+**APPROVED by Chief.**
 
-## Completed foundation
-- Rule integrity and mandatory rule rereading
-- Chief-only default high-load execution
-- High-load optimization check
-- Shared memory / memory economy
-- Chief-specific credit exhaustion pause behavior
-- Non-Chief AI failover behavior
-- AI status and suspension/recovery lifecycle
-- AI capability registry
-- Universal team operating protocol
-- Task lifecycle and completion gates
-- Project registration standard
-- Claude role definition
-- Concise current-state memory
-- Monthly memory cleanup + HQ health-check cycle
-- Interchangeable Reviewer Slot architecture
-- CodeRabbit repository-based Reviewer Slot validation
-- Gemini retirement from normal team routing
+The repository evidence demonstrates the required ordered lifecycle through `READY → IN_PROGRESS → REVIEW`, and the explicit approval gate is now recorded before completion.
 
-## Lifecycle test criteria
+## Completion criteria
 - Each state transition is represented by a repository commit.
 - `REVIEW` is reached only after execution is sufficiently complete for checking.
 - `APPROVED` is explicit and precedes `DONE`.
