@@ -12,13 +12,17 @@
 - Recorded these decisions as D-007 and D-008.
 - Added strict workload policy in `RULES.md` v1.4: ChatGPT / Chief is the only default high-load executor, including after new AIs are added.
 - Added AI availability, credit-limit, suspension, recovery, and failover rules.
-- Defined special handling for Chief credit exhaustion: preserve only the next actionable resumption step, pause high-load work, and inform the user instead of transferring execution.
+- Defined special handling for Chief credit exhaustion: preserve only the next actionable resumption step, pause the overall high-load work, and inform the user instead of transferring execution.
 - Added mandatory pre-execution optimization: consider lower-load alternatives before starting high-load work.
 - Added Claude as a future team role and created AI status, failover, capability, retirement/recovery, and universal protocol documents.
 - Recorded these decisions as D-009, D-010, and D-011.
+- Audited the HQ foundation and updated the README, TASK, HANDOFF, and team-memory structure to match the current v1.4 architecture.
+- Added explicit task lifecycle/completion gates and reusable project-registration requirements.
+- Created `MEMORY/CURRENT.md` as a concise current-state memory so AIs do not need to load the full archive.
+- Updated the next phase to protocol validation before Gemini/Claude are used for normal work.
 
 ### Next
-Connect Gemini and Claude when ready, then verify that each AI can follow the current `RULES.md` and shared-memory protocol before assigning normal team work.
+Validate the standard task → handoff → result → review → decision → done lifecycle, then connect Gemini and Claude and run a small compliance/handoff test.
 
 ## 2026-09-13
 
