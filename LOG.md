@@ -23,9 +23,14 @@
 - Established monthly maintenance as a combined cycle: shared-memory cleanup plus AI TEAM HQ health check.
 - The monthly health check covers rule consistency, control-file/system consistency, task lifecycle readiness, AI status/failover behavior, stale or conflicting information, and safe project-entry readiness.
 - Health-check findings are recorded in `LOG.md`; rule changes require explicit user authorization and the normal decision/change procedure.
+- Replaced the fixed Gemini-review dependency with an interchangeable `Reviewer Slot` architecture.
+- Added `REVIEWER_SLOT.md` defining free-quota preference, reviewer failover, review triggers, evidence format, and no-fake-review requirements.
+- Updated `AI_STATUS.md`, `AI_TEAM_PROTOCOL.md`, and `ROLES.md` so Gemini, Claude, Copilot, and future registered non-Chief AIs can fill the review role when actually available and suitable.
+- Recorded the Reviewer Slot architecture as D-012.
+- No billing credentials or paid AI usage were added.
 
 ### Next
-Validate the standard task → handoff → result → review → decision → done lifecycle, then connect Gemini and Claude and run a small compliance/handoff test.
+Validate the standard task → handoff → result → review → decision → done lifecycle using the Reviewer Slot, then verify which eligible free reviewer integrations can reduce user bridging work without adding paid credentials.
 
 ## 2026-09-13
 
