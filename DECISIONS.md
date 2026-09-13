@@ -54,3 +54,8 @@ When a non-Chief AI reaches a credit limit or becomes unavailable, its normal lo
 **Status:** CONFIRMED
 
 Before any high-load execution, Chief must consider lower-load alternatives such as targeted edits, incremental processing, reuse of existing artifacts, selective memory loading, or smaller test scopes. A lower-load approach should be preferred when it preserves required quality and correctness.
+
+## D-012 — Interchangeable Reviewer Slot
+**Status:** CONFIRMED
+
+The independent-review role is a slot rather than a permanent dependency on Gemini. Gemini, Claude, Copilot, or another explicitly registered non-Chief AI may fill the slot when its connection, availability, role fit, and usable free quota are verified. Prefer free-quota usage and already integrated workflows when quality is sufficient. Do not create billing credentials or paid usage merely to fill the slot. Reviewer substitution does not change task scope, authority, or completion criteria, and a review is not considered complete without evidence that it actually occurred.
