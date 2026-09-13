@@ -29,3 +29,13 @@ Because the user's Copilot and Gemini usage has limited credits, ChatGPT / Chief
 **Status:** CONFIRMED
 
 Every AI must read the current `RULES.md` before every task, action, recommendation, handoff, review, or result. The rule check must be repeated when a task changes or a new handoff/result/review is received. No AI may silently ignore, weaken, reinterpret, or bypass the rules because of conversation length, accumulated context, convenience, or resource limits. Changes to `RULES.md` require explicit user authorization and must be recorded in `DECISIONS.md` and `LOG.md` before becoming active.
+
+## D-007 — GitHub is the durable shared memory for all work
+**Status:** CONFIRMED
+
+Important information from work performed both inside and outside GitHub should be recorded in AI TEAM HQ when another AI may need it later. The team should save decisions, current state, key results, constraints, unresolved issues, findings, and handoff information, while avoiding unnecessary raw transcripts, temporary thoughts, duplicates, and low-value content.
+
+## D-008 — ChatGPT owns memory maintenance by default
+**Status:** CONFIRMED
+
+Periodic memory maintenance is assigned to ChatGPT / Chief because it is high-load work requiring cross-file judgment. Copilot and Gemini may identify stale, redundant, obsolete, or conflicting information and recommend cleanup, but do not perform high-load cleanup by default. Cleanup must preserve active rules, confirmed decisions, required evidence, unresolved issues, and information still needed to operate the team.
