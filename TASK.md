@@ -1,13 +1,18 @@
 # TASK
 
 ## Status
-READY
+IN_PROGRESS
 
 ## Objective
 Complete validation of the AI TEAM HQ collaboration protocol before using it as the shared control center for future projects.
 
 ## Current phase
 Repository-evidenced sample lifecycle test.
+
+## Lifecycle test
+- READY: entered by commit `2c8bc2eb00bc2c3ca347039e62ac9b594e568458`.
+- IN_PROGRESS: execution of the lifecycle validation is now active.
+- Next target: REVIEW.
 
 ## Completed foundation
 - Rule integrity and mandatory rule rereading
@@ -39,13 +44,6 @@ Repository-evidenced sample lifecycle test.
 - Recorded CodeRabbit review evidence in `REVIEW.md` and registered it in the Reviewer Slot status/capability registries.
 - Verified Gemini is retired and excluded from routing/review.
 - Verified Claude remains optional and is not claimed as connected.
-
-## Current review gate
-The Reviewer Slot is verified with repository evidence through CodeRabbit. The remaining test is the state-machine lifecycle itself.
-
-## Lifecycle test target
-Exercise this exact sequence with repository evidence:
-`READY → IN_PROGRESS → REVIEW → APPROVED → DONE`
 
 ## Lifecycle test criteria
 - Each state transition is represented by a repository commit.
