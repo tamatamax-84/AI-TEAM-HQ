@@ -28,9 +28,12 @@
 - Updated `AI_STATUS.md`, `AI_TEAM_PROTOCOL.md`, and `ROLES.md` so Gemini, Claude, Copilot, and future registered non-Chief AIs can fill the review role when actually available and suitable.
 - Recorded the Reviewer Slot architecture as D-012.
 - No billing credentials or paid AI usage were added.
+- Verified CodeRabbit as an actual repository-based Reviewer Slot reviewer using temporary PR #1. CodeRabbit detected the intentional `is_even` parity defect, posted one actionable inline finding, and reported LOW merge risk with 5 pre-merge checks passing.
+- Closed PR #1 without merging it after verification.
+- Registered CodeRabbit in `AI_STATUS.md` and `AI_CAPABILITIES.md` as a low-load Reviewer Slot candidate and recorded the evidence in `REVIEW.md`.
 
 ### Next
-Validate the standard task → handoff → result → review → decision → done lifecycle using the Reviewer Slot, then verify which eligible free reviewer integrations can reduce user bridging work without adding paid credentials.
+Exercise the repository-evidenced sample task lifecycle `READY → IN_PROGRESS → REVIEW → APPROVED → DONE`. Keep Gemini and Claude optional until actual connection and availability are verified; do not claim either review occurred.
 
 ## 2026-09-13
 
