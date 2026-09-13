@@ -32,6 +32,12 @@ Protocol audit and readiness validation.
 - Run a small multi-AI rule-compliance and handoff test.
 - Fix any issues discovered during the test before normal project work.
 
+## Ongoing maintenance
+- Monthly maintenance combines shared-memory cleanup with an AI TEAM HQ health check.
+- The health check reviews rule consistency, system/control-file consistency, task lifecycle readiness, AI status/failover behavior, stale or conflicting information, and whether a new project can safely enter the workflow.
+- Findings are recorded in `LOG.md`; proposed rule changes require explicit user authorization and the normal decision/change procedure.
+- Chief owns the monthly maintenance by default. Other AIs may flag issues during low-load review but do not perform high-load cleanup by default.
+
 ## Constraints
 - User should not manually edit code or protocol files.
 - Do not create external credentials or secrets.
