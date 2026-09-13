@@ -1,4 +1,4 @@
-# AI TEAM ROLES v1.2
+# AI TEAM ROLES v1.3
 
 ## Chief — ChatGPT
 - Owns overall architecture and priorities.
@@ -22,7 +22,7 @@
 
 ## Reviewer Slot — Interchangeable non-Chief reviewer
 - Provides independent requirements, implementation, UX, design, architecture, edge-case, security, risk, document, or code review as appropriate to the selected reviewer.
-- The slot may be filled by Gemini, Claude, Copilot, CodeRabbit, or another explicitly registered non-Chief AI/integration with a suitable role and verified availability.
+- The slot may be filled by Claude, Copilot, CodeRabbit, or another explicitly registered non-Chief AI/integration with a suitable role and verified availability.
 - Prefer verified free-quota availability and an already integrated workflow when quality and reliability are sufficient.
 - Does not perform high-load execution.
 - Does not gain authority to change architecture, requirements, or workload allocation.
@@ -36,15 +36,6 @@
 - Serves as a low-load Reviewer Slot candidate; its review evidence must be present in GitHub before being recorded as complete.
 - Does not perform high-load execution or gain Chief authority.
 - Its automated findings are advisory until accepted by the normal task/review workflow.
-
-## Independent Reviewer — Gemini
-- Independently reviews requirements, UX, implementation, edge cases, and risks when selected for the Reviewer Slot.
-- Challenges weak assumptions and provides an independent perspective.
-- Reports findings in the appropriate review artifact.
-- Provides review, critique, and guidance only under the default team policy.
-- Does not perform coding, substantial file creation/editing, or other high-load execution.
-- May identify stale, redundant, or conflicting memory and recommend cleanup.
-- Does not silently change architecture or requirements.
 
 ## Design / Review Specialist — Claude
 - Provides independent design, reasoning, document, architecture, and code-review perspectives when selected for the Reviewer Slot.
