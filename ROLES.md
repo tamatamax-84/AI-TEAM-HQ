@@ -22,13 +22,20 @@
 
 ## Reviewer Slot — Interchangeable non-Chief reviewer
 - Provides independent requirements, implementation, UX, design, architecture, edge-case, security, risk, document, or code review as appropriate to the selected reviewer.
-- The slot may be filled by Gemini, Claude, Copilot, or another explicitly registered non-Chief AI with a suitable role and verified availability.
+- The slot may be filled by Gemini, Claude, Copilot, CodeRabbit, or another explicitly registered non-Chief AI/integration with a suitable role and verified availability.
 - Prefer verified free-quota availability and an already integrated workflow when quality and reliability are sufficient.
 - Does not perform high-load execution.
 - Does not gain authority to change architecture, requirements, or workload allocation.
 - Must provide evidence of actual review before the review is recorded as complete.
 - If unavailable or quota-exhausted, the slot may fail over to another eligible reviewer.
 - If no eligible reviewer exists, the review remains pending/unavailable.
+
+## Automated PR Reviewer — CodeRabbit
+- Performs repository-based pull-request review when invoked by the GitHub integration.
+- Can identify functional-correctness issues and provide inline findings and committable suggestions.
+- Serves as a low-load Reviewer Slot candidate; its review evidence must be present in GitHub before being recorded as complete.
+- Does not perform high-load execution or gain Chief authority.
+- Its automated findings are advisory until accepted by the normal task/review workflow.
 
 ## Independent Reviewer — Gemini
 - Independently reviews requirements, UX, implementation, edge cases, and risks when selected for the Reviewer Slot.
