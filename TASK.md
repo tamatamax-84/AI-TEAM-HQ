@@ -1,13 +1,13 @@
 # TASK
 
 ## Status
-IN_PROGRESS
+REVIEW
 
 ## Objective
 Complete validation of the AI TEAM HQ collaboration protocol before using it as the shared control center for future projects.
 
 ## Current phase
-Protocol audit and readiness validation.
+Protocol validation — Chief execution/check phase complete; independent review pending.
 
 ## Completed foundation
 - Rule integrity and mandatory rule rereading
@@ -23,10 +23,22 @@ Protocol audit and readiness validation.
 - Project registration standard
 - Claude role definition
 - Concise current-state memory
+- Monthly memory cleanup + HQ health-check cycle
+
+## Validation performed by Chief
+- Re-read the current `RULES.md` before continuing.
+- Checked the task lifecycle definition against the operating protocol.
+- Checked that high-load execution, optimization, evidence, handoff, failover, and memory rules are mutually aligned.
+- Checked that the current handoff explicitly prevents claiming an unavailable Gemini/Claude review.
+- Checked that task completion requires evidence rather than an AI assertion.
+
+## Current review gate
+The protocol is ready for independent review. Gemini and Claude are still `NOT_CONNECTED`, so no independent AI review is claimed as completed.
 
 ## Remaining validation
-- Verify all control files are mutually consistent.
-- Verify the standard task → handoff → result → review → decision → done lifecycle.
+- Obtain an actual independent review from an available non-Chief AI.
+- Resolve and record any findings.
+- Verify the full sample lifecycle reaches APPROVED and DONE with repository evidence.
 - Connect and verify Gemini.
 - Connect and verify Claude.
 - Run a small multi-AI rule-compliance and handoff test.
