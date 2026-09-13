@@ -24,3 +24,8 @@ The desired operating model is that the user states the goal and acts as a bridg
 **Status:** CONFIRMED
 
 Because the user's Copilot and Gemini usage has limited credits, ChatGPT / Chief performs high-load work by default. This includes coding, substantial file creation/editing, data processing, artifact generation, multi-file implementation, and complex implementation. GitHub Copilot and Gemini are reserved for instruction, planning, inspection, review, critique, validation guidance, and handoffs unless the user explicitly authorizes an exception.
+
+## D-006 — Rules must be checked every time
+**Status:** CONFIRMED
+
+Every AI must read the current `RULES.md` before every task, action, recommendation, handoff, review, or result. The rule check must be repeated when a task changes or a new handoff/result/review is received. No AI may silently ignore, weaken, reinterpret, or bypass the rules because of conversation length, accumulated context, convenience, or resource limits. Changes to `RULES.md` require explicit user authorization and must be recorded in `DECISIONS.md` and `LOG.md` before becoming active.
