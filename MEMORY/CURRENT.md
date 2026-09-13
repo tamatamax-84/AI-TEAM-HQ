@@ -21,6 +21,8 @@ AI-to-AI communication must not be assumed to be direct; repository artifacts ar
 - Chief credit exhaustion pauses high-load work; only the next actionable resumption step and required context are saved, and the user is informed.
 - GitHub stores important shared knowledge from both GitHub and non-GitHub work, but AIs load only relevant memory.
 - Memory is periodically consolidated, archived, or deleted by Chief while preserving active rules, decisions, evidence, unresolved issues, and required operating knowledge.
+- Monthly maintenance combines memory cleanup with a HQ health check covering rule consistency, control-file/system consistency, task lifecycle readiness, AI status/failover behavior, stale/conflicting information, and safe project-entry readiness.
+- Health-check findings are recorded in `LOG.md`; rule changes still require explicit user authorization and the normal decision/change procedure.
 
 ## Current next action
 Finish HQ protocol validation, then connect Gemini and Claude and run a small rule-compliance / handoff test before assigning normal work.
