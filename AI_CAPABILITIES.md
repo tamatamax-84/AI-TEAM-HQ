@@ -22,12 +22,6 @@ This is a working registry, not a claim of permanent model superiority. Update i
 - Inline review findings and committable suggestions
 - Low-load Reviewer Slot validation
 
-## Gemini
-- Independent requirements review
-- Independent UX and implementation review
-- Edge-case and risk critique
-- Alternative perspective
-
 ## Claude
 - Independent design and reasoning review
 - Architecture critique
@@ -39,3 +33,4 @@ This is a working registry, not a claim of permanent model superiority. Update i
 - All AIs remain subject to `RULES.md`.
 - High-load execution remains assigned to ChatGPT / Chief by default.
 - CodeRabbit is a reviewer integration, not a high-load execution AI.
+- Retired AIs are excluded from normal routing and are not listed as active capabilities.
