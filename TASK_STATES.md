@@ -19,5 +19,11 @@ Possible exception states:
 - `PAUSED`: record only the information required to resume efficiently; do not accumulate unnecessary context.
 - `CANCELLED`: preserve the reason and any reusable result when useful.
 
+## Review rejection / rework
+- If review finds a correctable issue, the task returns from `REVIEW` to `IN_PROGRESS` with a recorded rework request and updated completion criteria if needed.
+- After rework, the task returns to `REVIEW` for another independent check.
+- A task must not move directly from `REVIEW` to `DONE`.
+- `APPROVED` is the explicit gate between successful review and `DONE`.
+
 ## Completion gate
 A task must not be marked `DONE` merely because an AI says it is done. Evidence and required checks must support completion.
