@@ -2,33 +2,41 @@
 
 ## Message metadata
 - From: Chief
-- To: Copilot / Builder-Hub
+- To: Protocol validation / next available review AI
 - Status: READY
 
 ## Mission
-Establish the reusable AI-to-AI handoff protocol for this repository.
+Validate the current AI TEAM HQ protocol before Gemini and Claude are used for normal work.
 
 ## Read first
 - RULES.md
 - ROLES.md
 - TASK.md
+- TASK_STATES.md
 - DECISIONS.md
+- AI_STATUS.md
+- AI_TEAM_PROTOCOL.md
 
 ## Required actions
-1. Review the current protocol files.
-2. Identify missing or contradictory rules that would prevent a clean Chief → Copilot → Gemini → Chief cycle.
-3. Propose or implement the minimum required protocol improvements.
-4. Do not broaden the project into an automation platform yet.
-5. Record all work in RESULT.md.
+1. Check protocol consistency and role boundaries.
+2. Verify that credit-limit and failover behavior is unambiguous.
+3. Verify that high-load work remains ChatGPT-only by default.
+4. Verify that high-load work requires a lower-load alternative check before execution.
+5. Verify that memory is selectively loaded and periodically maintained by Chief.
+6. Identify any contradictions, missing gates, stale instructions, or unsafe assumptions.
+7. Do not perform high-load implementation.
+8. Record findings in the appropriate review/result artifact.
 
 ## Output contract
-RESULT.md must contain:
+Report:
 - status
-- files changed
-- what was done
-- tests/checks performed
-- remaining issues
+- files inspected
+- findings
+- contradictions or gaps
+- recommended changes
+- checks performed
+- remaining risks
 - recommendation for the next agent
 
 ## Important
-If direct Gemini execution is not available in the current environment, do not pretend it happened. Record the exact handoff needed for Gemini instead.
+If Gemini or Claude is not actually available through the current environment, do not pretend the review occurred. Record the exact review handoff needed instead.
