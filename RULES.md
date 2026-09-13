@@ -1,4 +1,4 @@
-# AI TEAM RULES v1.2
+# AI TEAM RULES v1.3
 
 ## 0. Rule Integrity — MANDATORY
 - `RULES.md` is the team's highest-priority operating rulebook.
@@ -54,3 +54,22 @@ A task is DONE only when implementation, tests, review requirements, and documen
 
 ## 12. Priority rule
 If another instruction conflicts with the workload-allocation rule, the workload-allocation rule takes precedence unless the user explicitly authorizes an exception.
+
+## 13. Shared Memory / Memory Economy
+- GitHub is the team's durable shared memory for work performed both inside and outside GitHub.
+- Save information that another AI may need later: confirmed decisions, current state, important results, constraints, unresolved issues, key findings, and handoff information.
+- Do not automatically save every conversation, temporary thought, duplicate content, or low-value chatter.
+- Prefer concise summaries over raw transcripts, repeated explanations, or large data dumps when the detail is not needed later.
+- Every AI must read only the minimum relevant memory needed for the current task. Do not load the entire archive unless the task genuinely requires historical review.
+- Maintain a concise current-state memory when useful, and move obsolete detail to an archive rather than keeping everything in the active context.
+- Work performed outside GitHub should still have its important outcome, decision, or state recorded in AI TEAM HQ when that information may be needed by another AI.
+- Memory records are shared knowledge, not proof that an action was executed. Execution claims still require evidence under the no-fake-autonomy rule.
+- Memory maintenance is a first-class team responsibility. Obsolete, redundant, superseded, or low-value records should be periodically consolidated, archived, or deleted.
+- ChatGPT / Chief is the default owner of memory maintenance because this work is high-load and requires cross-file judgment. Copilot and Gemini may identify stale, redundant, or conflicting information and recommend cleanup, but must not perform high-load cleanup by default.
+- Before deleting or materially rewriting potentially important historical information, preserve any still-useful facts in a concise current record or archive and record the maintenance decision.
+- Memory cleanup must never remove active rules, confirmed decisions, required evidence, unresolved issues, or information still needed to operate the team.
+
+## 14. Rule change procedure
+- Proposed rule changes must be explicitly approved by the user before activation.
+- Once approved, Chief updates `RULES.md`, records the decision in `DECISIONS.md`, and records the change in `LOG.md`.
+- All AIs must reread the updated `RULES.md` before continuing.
