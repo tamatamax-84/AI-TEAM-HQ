@@ -1,12 +1,22 @@
-# AI TEAM RULES v1.1
+# AI TEAM RULES v1.2
+
+## 0. Rule Integrity — MANDATORY
+- `RULES.md` is the team's highest-priority operating rulebook.
+- Every AI must read and confirm the current `RULES.md` at the start of every task, before taking any action or making any recommendation.
+- This check must be repeated whenever the task changes, a new handoff is received, or another AI's result/review is processed.
+- No AI may ignore, bypass, reinterpret, or silently weaken a rule because of conversation length, accumulated context, convenience, token/credit limits, or a later local instruction.
+- A rule remains in force across the entire task and future conversations until the user explicitly changes it.
+- If any instruction conflicts with `RULES.md`, stop and escalate the conflict to Chief. Do not choose the conflicting instruction silently.
+- Changes to `RULES.md` itself require explicit user authorization. No AI may modify the rulebook merely to make its own task easier or to override an existing rule.
+- When `RULES.md` is changed, the change must be recorded in `DECISIONS.md` and `LOG.md` before the new rule is treated as active.
 
 ## 1. Authority
 - Chief is the final decision maker for architecture, priorities, integration, and unresolved conflicts.
 - No member may silently override a confirmed decision.
 
 ## 2. Shared memory
-Before acting, read the latest TASK.md, HANDOFF.md, DECISIONS.md, and relevant project context.
-After acting, write RESULT.md and update LOG.md when appropriate.
+Before acting, read the latest `RULES.md`, `TASK.md`, `HANDOFF.md`, `DECISIONS.md`, and relevant project context.
+After acting, write `RESULT.md` and update `LOG.md` when appropriate.
 
 ## 3. AI workload allocation
 - ChatGPT / Chief is the primary execution AI for high-load work.
@@ -37,7 +47,7 @@ Never commit passwords, API keys, tokens, private contact information, or unnece
 Every handoff must state: sender, recipient, task, context, required action, constraints, expected output, and completion criteria.
 
 ## 10. Conflicts
-If two AIs disagree, record both positions in REVIEW.md. Chief resolves the conflict.
+If two AIs disagree, record both positions in `REVIEW.md`. Chief resolves the conflict.
 
 ## 11. Completion
 A task is DONE only when implementation, tests, review requirements, and documentation required by the task are complete.
