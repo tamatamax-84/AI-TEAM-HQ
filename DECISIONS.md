@@ -19,3 +19,8 @@ The team must distinguish actual tool execution from a requested handoff. No AI 
 **Status:** CONFIRMED
 
 The desired operating model is that the user states the goal and acts as a bridge only where product/tool limitations require it.
+
+## D-005 — ChatGPT is the primary execution AI
+**Status:** CONFIRMED
+
+Because the user's Copilot and Gemini usage has limited credits, ChatGPT / Chief performs high-load work by default. This includes coding, substantial file creation/editing, data processing, artifact generation, multi-file implementation, and complex implementation. GitHub Copilot and Gemini are reserved for instruction, planning, inspection, review, critique, validation guidance, and handoffs unless the user explicitly authorizes an exception.
