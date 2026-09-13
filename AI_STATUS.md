@@ -14,9 +14,17 @@ This file is the shared operational status registry for AI TEAM HQ.
 | AI | Status | Default role | High-load execution |
 |---|---|---|---|
 | ChatGPT / Chief | ACTIVE | Chief / execution / memory maintenance | YES |
-| GitHub Copilot | ACTIVE | Instruction / review hub | NO |
-| Gemini | NOT_CONNECTED | Independent reviewer | NO |
-| Claude | NOT_CONNECTED | Design / review specialist | NO |
+| GitHub Copilot | ACTIVE | Instruction / review hub / Reviewer Slot candidate | NO |
+| Gemini | NOT_CONNECTED | Reviewer Slot candidate / independent reviewer | NO |
+| Claude | NOT_CONNECTED | Reviewer Slot candidate / design & review specialist | NO |
+
+## Reviewer Slot
+- `REVIEWER_SLOT.md` defines the interchangeable independent-review role.
+- The slot prefers a verified active reviewer with usable free quota and suitable review capability.
+- Do not create billing credentials or paid usage merely to fill the slot.
+- If one reviewer is unavailable or its usable quota is exhausted, another eligible reviewer may be selected without changing the task or authority structure.
+- A reviewer must be actually available and must produce evidence before its review is recorded as completed.
+- If no eligible reviewer is available, the review remains pending/unavailable; do not claim completion.
 
 ## Status rules
 - Credit exhaustion or availability problems must be reflected here when known.
