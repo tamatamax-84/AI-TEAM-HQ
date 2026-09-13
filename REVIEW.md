@@ -1,14 +1,15 @@
 # REVIEW
 
 ## Review status
-WARN — preliminary external review completed; Chief follow-up inspection completed.
+WARN — Reviewer Slot integration is PASS; broader HQ protocol validation remains open for the sample lifecycle gate.
 
 ## Reviewer
+CodeRabbit — repository-based PR review, verified through GitHub PR #1.
 Gemini — preliminary structural review without direct repository-file access.
 Chief — source verification and corrective action.
 
 ## Review target
-The AI TEAM HQ protocol and the current task/handoff/review workflow.
+The AI TEAM HQ protocol and the current task/handoff/review workflow, plus the Reviewer Slot integration test.
 
 ## Review checklist
 - Role separation is clear.
@@ -24,6 +25,16 @@ The AI TEAM HQ protocol and the current task/handoff/review workflow.
 - Memory economy and monthly maintenance do not remove required operational knowledge.
 - Failover behavior is unambiguous, including the special Chief pause rule.
 - `DONE` requires repository evidence and required review/checks.
+
+## Verified CodeRabbit review
+- Review target: temporary PR #1, `test: validate CodeRabbit Reviewer Slot`.
+- PR state after verification: `closed`, `merged: false`.
+- Review state: `COMMENTED` with 1 actionable finding.
+- Finding: `tests/coderabbit_review_demo.py` line 3 used `number % 2 == 1`, causing `is_even` to return `True` for positive odd integers and `False` for even integers.
+- Recommended correction: change the expression to `number % 2 == 0`.
+- CodeRabbit assessed merge risk as LOW and reported 5 pre-merge checks passing.
+- Review evidence is retained in GitHub PR #1 and its review thread; no fix was merged because the PR was intentionally temporary.
+- This verifies that CodeRabbit can fill the Reviewer Slot as an actual repository-based low-load reviewer and detect a concrete correctness defect.
 
 ## Gemini preliminary findings
 Gemini could not directly inspect the current repository files in its environment, so its assessment was explicitly a general structural audit rather than a file-level verification.
@@ -46,9 +57,11 @@ Concrete hardening actions completed:
 - `AGENTS.md` was stale relative to the v1.4 workload/failover protocol and has been aligned.
 - `TASK_STATES.md` now explicitly defines review rejection/rework as `REVIEW → IN_PROGRESS → REVIEW` and preserves `APPROVED` as the gate before `DONE`.
 - `SECURITY.md` was added with explicit secret-handling, sensitive-data, and future secret-scanning guidance.
+- `REVIEWER_SLOT.md` defines an evidence format and no-fake-review rule.
+- CodeRabbit was verified as an actual repository-based Reviewer Slot candidate through PR #1 and registered in `AI_STATUS.md` and `AI_CAPABILITIES.md`.
 
 ## Remaining limitation
-This is not yet a fully independent file-level Gemini review because Gemini did not have direct repository access. Gemini and Claude remain `NOT_CONNECTED` until an actual connection and evidence are verified.
+This is not yet a full file-level Gemini or Claude review because neither is connected. The sample task lifecycle still requires an explicit repository-evidenced READY → IN_PROGRESS → REVIEW → APPROVED → DONE validation before the overall protocol-validation task can be marked DONE.
 
 ## Chief decision
-Do not mark the sample validation `APPROVED` or `DONE` yet. The identified structural hardening actions have been applied, but the independent-review gate remains open until an actually connected non-Chief reviewer performs a repository-based review.
+CodeRabbit Reviewer Slot validation is PASS and the temporary PR is closed without merge. Keep the overall protocol-validation task open until the sample lifecycle gate is exercised with repository evidence.
