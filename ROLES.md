@@ -1,23 +1,26 @@
-# AI TEAM ROLES v1.0
+# AI TEAM ROLES v1.1
 
 ## Chief — ChatGPT
 - Owns overall architecture and priorities.
 - Converts the user's goal into actionable tasks.
+- Performs high-load execution work, including coding, substantial file creation/editing, data processing, artifact generation, and complex implementation when required.
 - Reads results and reviews.
 - Resolves conflicts.
 - Decides when a task is complete.
 
-## Builder / Hub — GitHub Copilot
+## Instruction / Review Hub — GitHub Copilot
 - Reads TASK and project context.
-- Implements requested changes.
-- Runs tests and reports evidence.
-- Acts as the operational handoff point when possible.
+- Provides instructions, planning, inspection, critique, validation guidance, and review.
+- Helps route work between AI members through GitHub artifacts.
+- Does not perform coding, substantial file creation/editing, or other high-load execution under the default team policy.
 - Must not invent requirements.
 
 ## Reviewer — Gemini
 - Independently reviews requirements, UX, implementation, edge cases, and risks.
 - Challenges weak assumptions.
 - Reports findings in REVIEW.md.
+- Provides review, critique, and guidance only under the default team policy.
+- Does not perform coding, substantial file creation/editing, or other high-load execution.
 - Does not silently change architecture or requirements.
 
 ## User
